@@ -26,7 +26,7 @@ jobs:
           context: ./
           push: true
           dockerfile: ./Dockerfile
-          tags: your-dockerhub-username/cddemo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cddemo:latest
   deploy:
     needs: build
     runs-on: ubuntu-latest
